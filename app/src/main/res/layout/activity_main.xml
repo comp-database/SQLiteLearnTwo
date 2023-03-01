@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Regular"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Number"
+        app:layout_constraintTop_toBottomOf="@+id/Number" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/FirstBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="4dp"
+        android:text="First"
+        app:layout_constraintBaseline_toBaselineOf="@+id/NextBtn"
+        app:layout_constraintEnd_toStartOf="@+id/NextBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/NextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Next"
+        app:layout_constraintEnd_toStartOf="@+id/PrevBtn"
+        app:layout_constraintStart_toEndOf="@+id/FirstBtn"
+        app:layout_constraintTop_toBottomOf="@+id/Regular" />
+
+    <Button
+        android:id="@+id/PrevBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="Previous"
+        app:layout_constraintBaseline_toBaselineOf="@+id/NextBtn"
+        app:layout_constraintEnd_toStartOf="@+id/LastBtn"
+        app:layout_constraintStart_toEndOf="@+id/NextBtn" />
+
+    <Button
+        android:id="@+id/InsertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="2dp"
+        android:text="Insert"
+        app:layout_constraintBaseline_toBaselineOf="@+id/UpdateBtn"
+        app:layout_constraintEnd_toStartOf="@+id/UpdateBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/LastBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="Last"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PrevBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PrevBtn" />
+
+    <Button
+        android:id="@+id/UpdateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DeleteBtn"
+        app:layout_constraintEnd_toStartOf="@+id/DeleteBtn"
+        app:layout_constraintStart_toEndOf="@+id/InsertBtn" />
+
+    <Button
+        android:id="@+id/ClearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:text="Clear"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DeleteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/DeleteBtn" />
+
+    <Button
+        android:id="@+id/DeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="1dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toStartOf="@+id/ClearBtn"
+        app:layout_constraintStart_toEndOf="@+id/UpdateBtn"
+        app:layout_constraintTop_toBottomOf="@+id/PrevBtn" />
+
+    <Button
+        android:id="@+id/ViewAllBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:text="View ALL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:visibility="gone"
+        android:id="@+id/searchView"
+        android:layout_width="405dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/ListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ViewAllBtn" />
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/ListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
